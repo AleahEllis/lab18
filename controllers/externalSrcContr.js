@@ -1,5 +1,8 @@
-angular.module('mod')
-	.controller("theSource",function($scope){
-  		
-  		});
-  		 console.log("see a thing?")
+
+
+app.controller('externalSrcContr', ['externalSrcservice', function(externalSrcservice){
+	externalSrcservice.then(function(response){
+		console.log(response);
+	});
+}]);
+

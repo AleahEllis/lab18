@@ -1,6 +1,10 @@
-var gulp=require('gulp');
-var stylus=require('gulp-stylus');
-var concat=require('gulp-concat');
+
+var gulp = require('gulp');
+var stylus = require('gulp-stylus');
+var concat = require('gulp-concat')
+
+
+
 
 
 
@@ -13,12 +17,13 @@ gulp.task('doStylus', function () { //this works well
 
  gulp.task("concatScripts", function() { //had errors with this on labe 15, not sure that it works
             gulp.src([
-              'controller/externalSrcContr.js',
-              'controller/homeContr.js',
-              'controller/kataContr.js',
-              'httpservice.js',
               'app.js',
-              'service.js'])
+              'controllers/externalSrcContr.js',
+              'controllers/homeContr.js',
+              'controllers/kataContr.js',
+              'routes/routes.js',
+              'services/externalSrcService.js'
+              ])
             .pipe(concat("app.js"))
             .pipe(gulp.dest('js'));
           });
