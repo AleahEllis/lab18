@@ -19,3 +19,6 @@ angular.module('mod', ['ngRoute']) //should work. I have not tried it yet
         })
     .otherwise({ redirectTo: '/' }); //the ohterwise does not go anywhere, I never got around to figuringthat out
 });
+
+
+
