@@ -1,6 +1,6 @@
 angular.module('mod')
-
-
-.controller("homecontr", function($scope){
-  console.log("welcome home")
-});
+	.controller("homecontr", function($scope){
+	 
+	});
+	 
+	console.log("welcome home")
