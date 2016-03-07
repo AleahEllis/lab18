@@ -1,5 +1,5 @@
 angular.module('mod')
-	.factory('', function(){
+	.factory('inputService', function(){
 		var somthing=something //we probably need this?
 	return{ //we proabbly also need something like this 
 
