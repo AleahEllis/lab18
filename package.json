@@ -1,0 +1,22 @@
+{
+  "name": "lab15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleahEllis/Lab15--Introducing-Services.git"
+  },
+  "author": "aleah ellis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleahEllis/Lab15--Introducing-Services/issues"
+  },
+  "homepage": "https://github.com/AleahEllis/Lab15--Introducing-Services#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
