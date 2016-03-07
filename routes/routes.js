@@ -1,19 +1,16 @@
-
-var app = angular.module('route', ['ngRoute']);
-
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'homeview.html',
+      templateUrl: '/views/homeview.html',
       controller: 'homeContr'
     })
     .when('/external', {
-      templateUrl: 'externalSrcView.html',
-      controller: 'externalSrcContr',
+      templateUrl: '/views/externalSrcView.html',
+      controller: 'externalSrcContr'
     })
     .when('/kata', {
-      templateUrl: 'chapter.html',
-      controller: 'ChapterController'
+      templateUrl: '/views/kataView.html',
+      controller: 'kataContr'
     })
     .otherwise({ 
       redirectTo: '/'
