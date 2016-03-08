@@ -1,5 +1,5 @@
 
-var app = angular.module('route', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute']);
 
 
 
