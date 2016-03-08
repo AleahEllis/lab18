@@ -1,14 +1,73 @@
-app.controller('externalSrcContr', ['externalSrcservice', function(externalSrcservice){
-	externalSrcservice.then(function(response){
+var app = angular.module('myApp', ['ngRoute']);
+
+
+
+
+
+
+
+
+app.controller('externalSrcContr', ['externalService', function(externalService){
+	externalService.then(function(response){
 		console.log(response);
 	});
-}])
+}]);
+
+
+
 app.controller("homeContr", function(){
   console.log("welcome home")
 });
-app.controller("kataContr", function(){
-  console.log("welcome home")
+
+app.directive("firstDirective", function(){
+	return{
+		template: "<h1 id='directiveOne'>First Directive</h1>"
+	};
 });
+
+app.directive("secondDirective", function(){
+	return{
+		template: "<h3 id='directiveTwo'>Second Directive</h3>"
+	};
+});
+
+
+app.controller("kataContr",function($scope){
+		$scope.word="";
+			$scope.palindrome=function(word){
+				var word=$scope.word;
+				var wordNoCaps = word.toLowerCase();
+			    var reverseWord = wordNoCaps.split("").reverse().join('');
+			    if (word === reverseWord){
+			    return  "yes congratulations, you found a  Palindrome";
+			    }else{
+			    return "aww man, that is not a palidrome";
+			    }
+			};
+	});
+		//var lower=word.to lowercase
+		//
+		
+		//the base that works
+		// var input=
+		// 	function palindrome(str) {
+		// 	    str = str.toLowerCase();
+		// 	    var reverseStr = str.split("").reverse().join('');
+		// 	    if (str === reverseStr){
+		// 	    return  "yes congratulations, you found a  Palindrome";
+		// 	    }else{
+		// 	    return "aww man, that is not a palidrome";
+		// 	    }
+		// 	}
+
+		// 	console.log(palindrome(str));
+
+  		
+
+
+
+
+
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -16,7 +75,7 @@ app.config(function($routeProvider) {
       controller: 'homeContr'
     })
     .when('/external', {
-      templateUrl: '/views/externalSrcView,html',
+      templateUrl: '/views/externalSrcView.html',
       controller: 'externalSrcContr'
     })
     .when('/kata', {
@@ -34,4 +93,4 @@ app.factory('externalService', ['$http', function($http){
 		method: 'GET',
 		url: 'https://thibaultcha-fortunecow-v1.p.mashape.com/random'
 	});
-}])
+}]);

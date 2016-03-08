@@ -1,5 +1,5 @@
-app.controller('externalSrcContr', ['externalSrcservice', function(externalSrcservice){
-	externalSrcservice.then(function(response){
+app.controller('externalSrcContr', ['externalService', function(externalService){
+	externalService.then(function(response){
 		console.log(response);
 	});
 }]);

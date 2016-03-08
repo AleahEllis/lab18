@@ -1,5 +1,5 @@
-angular.module('mod')
-	.controller("kataConr",function($scope, inputService){
+
+app.controller("kataContr",function($scope){
 		$scope.word="";
 			$scope.palindrome=function(word){
 				var word=$scope.word;
@@ -30,8 +30,6 @@ angular.module('mod')
 		// 	console.log(palindrome(str));
 
   		
-  		});
-  		 console.log("Kata, Baby!")
 
 
 

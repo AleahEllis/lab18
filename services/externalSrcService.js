@@ -5,4 +5,4 @@ app.factory('externalService', ['$http', function($http){
 		method: 'GET',
 		url: 'https://thibaultcha-fortunecow-v1.p.mashape.com/random'
 	});
-}])
+}]);
