@@ -3,6 +3,6 @@ app.factory('externalService', ['$http', function($http){
 	
 	return $http({
 		method: 'GET',
-		url: 'https://thibaultcha-fortunecow-v1.p.mashape.com/random'
+		url: 'https://www.reddit.com/r/news/.json'
 	});
 }]);

@@ -1,7 +1,19 @@
 
 
-<h1>hello</h1>
+<div class="container-fluid">
+	<div class="row" ng-repeat="item in redditArray">
+		<div class="col-xs-8 col-xs-offset-2 well well-sm">
+			<div class="col-xs-2">
+				<h6><span class="glyphicon glyphicon-search"></span></h6>
+			</div>
+			<div class="col-xs-10">
+				<h5 class="black"><a ng-href='{{item.link}}'>{{item.title}}</a></h5>
+			</div>
+		</div>
+	</div>
+</div>
 
-{{1+2}}
+
+
 
 
