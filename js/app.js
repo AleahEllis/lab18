@@ -8,7 +8,9 @@ var app = angular.module('myApp', ['ngRoute']);
 
 
 app.controller('externalSrcContr', ['$scope','externalService', function($scope, externalService){
-	
+	$scope.paperIcon = {
+	  	img: "images/paper.png",
+  	}
 	$scope.redditArray = [];
 
 	externalService.then(function(response){
@@ -24,7 +26,11 @@ app.controller('externalSrcContr', ['$scope','externalService', function($scope,
 	});
 }]);
 
-
+app.directive("secondDirective", function(){
+	return{
+		template: "<img ng-src='{{paperIcon.img}}'/>"
+	};
+});
 
 app.controller("homeContr", ['$scope', function($scope){
   $scope.homeImage = {
@@ -39,11 +45,6 @@ app.directive("firstDirective", function(){
 	};
 });
 
-app.directive("secondDirective", function(){
-	return{
-		template: "<h3 id='directiveTwo'>{{homeImage.caption}}</h3>"
-	};
-});
 
 
 app.controller("kataContr",function($scope){

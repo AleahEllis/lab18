@@ -11,8 +11,3 @@ app.directive("firstDirective", function(){
 	};
 });
 
-app.directive("secondDirective", function(){
-	return{
-		template: "<h3 id='directiveTwo'>{{homeImage.caption}}</h3>"
-	};
-});

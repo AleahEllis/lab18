@@ -1,5 +1,7 @@
 app.controller('externalSrcContr', ['$scope','externalService', function($scope, externalService){
-	
+	$scope.paperIcon = {
+	  	img: "images/paper.png",
+  	}
 	$scope.redditArray = [];
 
 	externalService.then(function(response){
@@ -15,4 +17,8 @@ app.controller('externalSrcContr', ['$scope','externalService', function($scope,
 	});
 }]);
 
-
+app.directive("secondDirective", function(){
+	return{
+		template: "<img ng-src='{{paperIcon.img}}'/>"
+	};
+});
