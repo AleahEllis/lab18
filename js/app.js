@@ -48,41 +48,21 @@ app.directive("firstDirective", function(){
 
 
 app.controller("kataContr",function($scope){
-		$scope.word="";
-			$scope.palindrome=function(word){
-				var word=$scope.word;
-				var wordNoCaps = word.toLowerCase();
-			    var reverseWord = wordNoCaps.split("").reverse().join('');
-			    if (word === reverseWord){
-			    return  "yes congratulations, you found a  Palindrome";
-			    }else{
-			    return "aww man, that is not a palidrome";
-			    }
-			};
-	});
-		//var lower=word.to lowercase
-		//
+	$scope.palindrome = function(word){
+		word.toLowerCase();
+	    var reverseWord = word.split("").reverse().join('');
+	    if (word === reverseWord){
+	    	$scope.no = '';
+	    	console.log('yay');
+	    	$scope.yes = "yes congratulations, you found a  Palindrome";
+	    } else {
+	    	$scope.yes = '';
+	    	console.log('nay');
+	    	$scope.no = "aww man, that is not a palidrome";
+	    }
+	};
+});
 		
-		//the base that works
-		// var input=
-		// 	function palindrome(str) {
-		// 	    str = str.toLowerCase();
-		// 	    var reverseStr = str.split("").reverse().join('');
-		// 	    if (str === reverseStr){
-		// 	    return  "yes congratulations, you found a  Palindrome";
-		// 	    }else{
-		// 	    return "aww man, that is not a palidrome";
-		// 	    }
-		// 	}
-
-		// 	console.log(palindrome(str));
-
-  		
-
-
-
-
-
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
